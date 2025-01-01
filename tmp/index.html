@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnetping</title>
+</head>
+<body>
+    <section>
+        <span>Network Address: </span>
+        <input type="text" id="input-name">
+
+        <span>Prefix (Subnet Mask): </span>
+        <select name="prefix">
+            <option value=32>/32 (255.255.255.255)</option>
+            <option value=31>/31 (255.255.255.254)</option>
+            <option value=30>/30 (255.255.255.252)</option>
+            <option value=29>/29 (255.255.255.248)</option>
+            <option value=28>/28 (255.255.255.240)</option>
+            <option value=27>/27 (255.255.255.224)</option>
+            <option value=26>/26 (255.255.255.192)</option>
+            <option value=25>/25 (255.255.255.128)</option>
+            <option value=24>/24 (255.255.255.0)</option>
+            <option value=23>/23 (255.255.254.0)</option>
+            <option value=2>/2 (192.0.0.0)</option>
+            <option value=1>/1 (128.0.0.0)</option>
+        </select>
+        <button onclick="handleCalculate"> Calculate </button>
+    </section>
+
+    <hr /> <!--  -->
+    
+    <section>
+        <details>
+            <summary>
+                네트워크 갯수: 1 (분할 0 회) , 규모: 128 , <span style="color:red">가용규모: 126</span> , Prefix (Subnet Mask): /25 (255.255.255.128)
+            </summary>
+            <table>
+                <tr>
+                    <th scope="col">네트워크 주소</th>
+                    <th scope="col">가용 주소</th>
+                    <th scope="col">브로드캐스트 주소</th>
+                </tr>
+                <tr>
+                    <td>192.168.160.128</td>
+                    <td>192.168.160.129 ~ 192.168.160.254</td>
+                    <td>192.168.160.255</td>
+                </tr>
+            </table>
+        </details>
+        
+        <details>
+            <summary>
+                네트워크 갯수: 2 (분할 1 회) , 규모: 64 , <span style="color:red">가용규모: 62</span> , Prefix (Subnet Mask): /26 (255.255.255.192)
+            </summary>
+            <table>
+                <tr>
+                    <th scope="col">네트워크 주소</th>
+                    <th scope="col">가용 주소</th>
+                    <th scope="col">브로드캐스트 주소</th>
+                </tr>
+                <tr>
+                    <td>192.168.160.128</td>
+                    <td>192.168.160.129 ~ 192.168.160.190</td>
+                    <td>192.168.160.191</td>
+                </tr>
+                <tr>
+                    <td>192.168.160.192</td>
+                    <td>192.168.160.193 ~ 192.168.160.254</td>
+                    <td>192.168.160.255</td>
+                </tr>
+            </table>
+        </details>
+
+    </section>
+
+
+</body>
+</html>
